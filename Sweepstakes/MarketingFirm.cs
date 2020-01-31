@@ -17,8 +17,7 @@ namespace Sweepstakes
         {
 
             this.manager = manager;
-            //
-            this.manager.
+           
         }
         //Member Method
         public void CreateSweepstake()
