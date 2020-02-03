@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Sweepstakes
 {
     
-    public class Sweepstakes
+    public class Sweepstakes 
     {
         //Member Variables
         private Dictionary<int, Contestant> contestants;
@@ -51,10 +51,11 @@ namespace Sweepstakes
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-            Console.WriteLine(contestant.FirstName + " " + contestant.LastName + "\n" + 
-                contestant.LastName + "\n" + contestant.RegistrationNumber);
+            Console.WriteLine($"Regsitration #: " + contestant.RegistrationNumber + "\n" + 
+                "Name: "+ contestant.FirstName + " " + contestant.LastName);
             Console.ReadLine();
             
         }
+      
     }
 }

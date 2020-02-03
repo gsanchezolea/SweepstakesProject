@@ -10,10 +10,12 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            ISweepstakesManager sssm = new SweepstakesStackManager();
-            MarketingFirm mf = new MarketingFirm(sssm);
-
-            mf.CreateSweepstake("test");
+            string firstName = UserInterface.GetUserInputFor("Please enter your first name:");
+            string lastName = UserInterface.GetUserInputFor("Please enter your last name:");
+          
+            
+            
+            
         }
     }
 }

@@ -6,32 +6,34 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public class Simulation        
+    public class Simulation
     {
-        MarketingFirm marketingFirm;
+
 
         public Simulation()
         {
-            
+
         }
 
-        public void CreateMarketingFirmWithManager()
+        public ISweepstakesManager SelectASweepstakeManager(string input)
         {
-            ISweepstakesManager newManager;
-            int input = 0;
-            
+            ISweepstakesManager manager;     
             switch (input)
             {
-                case 1: newManager = new SweepstakesStackManager();
-                    marketingFirm = new MarketingFirm(newManager);
-
-                    break;
-
-                case 2: newManager = new SweepstakesQueueManager();
-                        marketingFirm = new MarketingFirm(newManager);
-                    break;
+                case "stack":
+                    return manager = new SweepstakesStackManager();      
+                case "queue":
+                    return manager = new SweepstakesQueueManager();
+                default:
+                    Console.WriteLine("Invalid Entry");
+                    return null;             
             }
+        }
        
+        public void CreateMarketingFirmWithManager(ISweepstakesManager manager)
+        {
+            MarketingFirm marketingFirm = new MarketingFirm(manager);
+
         }
     }
 }
