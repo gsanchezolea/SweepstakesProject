@@ -12,12 +12,29 @@ namespace Sweepstakes
         //Member Variables
         private Dictionary<int, Contestant> contestants;
         private string name;
-        public string Name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+        
+      
+
+
         //Constructor
         public Sweepstakes(string name)
         {
             contestants = new Dictionary<int, Contestant>();
-            Name = name;
+
+            this.Name = name;
+          
+
         }
 
         //Member Method

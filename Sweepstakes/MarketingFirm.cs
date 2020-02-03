@@ -6,23 +6,36 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    
+
     public class MarketingFirm
     {
         //Member Variables
         private ISweepstakesManager manager;
-        
+        public ISweepstakesManager Manager
+        {
+            get
+            {
+                return manager;
+            }
+            set
+            {
+                manager = value;
+            }
+        }
+
+
         //Constructor
         public MarketingFirm(ISweepstakesManager manager)
         {
 
-            this.manager = manager;
-           
+            this.Manager = manager;
+
         }
         //Member Method
-        public void CreateSweepstake()
+        public void CreateSweepstake(string ssName)
         {
-
+            Sweepstakes ss = new Sweepstakes(ssName);
+            manager.InsertSweepstakes(ss);
         }
 
     }
